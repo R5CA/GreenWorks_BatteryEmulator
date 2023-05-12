@@ -6,116 +6,52 @@
 #define OmegaPort PORTB
 #define OmegaPINnum PB0
 
+#define imp 25
+#define impHi 93
+#define impLo0 399
+#define impLo1 206
+#define impLo2 107
+
+uint8_t code1[imp] = {0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
+uint8_t code2[imp] = {0,1,2,1,2,2,2,2,2,2,1,1,2,2,2,2,2,1,1,2,1,2,2,2,2};
+uint8_t code3[imp] = {0,2,1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,1,2,2,2,2};
+uint8_t code4[imp] = {0,2,2,1,1,2,2,2,2,1,2,1,1,2,1,2,2,1,2,2,1,1,1,2,2};
+uint8_t code5[imp] = {0,1,1,1,2,2,2,2,2,1,2,2,1,1,2,2,2,2,2,2,2,2,1,2,2};
+
 int main(void)
 {
 	OmegaDDR &= ~(1<<OmegaPINnum);
 	OmegaPort &= ~(1<<OmegaPINnum);
 	while(1)
 	{
-
 //******************************************************************* 1
 				OmegaDDR |= (1<<OmegaPINnum);
 				OmegaPort |= (1<<OmegaPINnum);	
 				_delay_ms(3);
-				OmegaPort &= ~(1<<OmegaPINnum); // 1
-				_delay_us(399);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 2
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 3
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 4
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 5
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 6
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 7
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 8
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 9
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 10
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 11
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 12
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 13
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 14
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 15
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 16
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 17
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 18
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 19
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 20
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 21
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 22
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 23
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 24
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 25
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
+				for(uint8_t i = 0; i < imp; i++)
+				{
+					if(code1[i] == 1)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo1);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code1[i] == 2)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo2);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code1[i] == 0)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo0);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+				}
 				OmegaDDR &= ~(1<<OmegaPINnum);
 				_delay_ms(100);
 
@@ -123,420 +59,120 @@ int main(void)
 				OmegaDDR |= (1<<OmegaPINnum);
 				OmegaPort |= (1<<OmegaPINnum);	
 				_delay_ms(3);
-				OmegaPort &= ~(1<<OmegaPINnum); // 1
-				_delay_us(399);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 2
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 3
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 4
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 5
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 6
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 7
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 8
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 9
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 10
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 11
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 12
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 13
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 14
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 15
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 16
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 17
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 18
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 19
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 20
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 21
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 22
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 23
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 24
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 25
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
+				for(uint8_t i = 0; i < imp; i++)
+				{
+					if(code2[i] == 1)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo1);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code2[i] == 2)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo2);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code2[i] == 0)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo0);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+				}
 				OmegaDDR &= ~(1<<OmegaPINnum);
 				_delay_ms(100);
 //******************************************************************* 3
 				OmegaDDR |= (1<<OmegaPINnum);
 				OmegaPort |= (1<<OmegaPINnum);	
 				_delay_ms(3);
-				OmegaPort &= ~(1<<OmegaPINnum); // 1
-				_delay_us(399);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 2
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 3
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 4
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 5
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 6
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 7
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 8
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 9
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 10
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 11
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 12
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 13
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 14
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 15
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 16
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 17
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 18
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 19
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 20
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 21
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 22
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 23
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 24
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 25
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
+				for(uint8_t i = 0; i < imp; i++)
+				{
+					if(code3[i] == 1)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo1);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code3[i] == 2)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo2);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code3[i] == 0)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo0);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+				}
 				OmegaDDR &= ~(1<<OmegaPINnum);
 				_delay_ms(120);
 //******************************************************************* 4
 				OmegaDDR |= (1<<OmegaPINnum);
 				OmegaPort |= (1<<OmegaPINnum);	
 				_delay_ms(3);
-				OmegaPort &= ~(1<<OmegaPINnum); // 1
-				_delay_us(399);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 2
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 3
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 4
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 5
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 6
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 7
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 8
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 9
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 10
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 11
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 12
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 13
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 14
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 15
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 16
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 17
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 18
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 19
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 20
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 21
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 22
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 23
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 24
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 25
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
+				for(uint8_t i = 0; i < imp; i++)
+				{
+					if(code4[i] == 1)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo1);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code4[i] == 2)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo2);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code4[i] == 0)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo0);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+				}
 				OmegaDDR &= ~(1<<OmegaPINnum);
 				_delay_ms(200);
 //******************************************************************* 5
 				OmegaDDR |= (1<<OmegaPINnum);
 				OmegaPort |= (1<<OmegaPINnum);	
 				_delay_ms(3);
-				OmegaPort &= ~(1<<OmegaPINnum); // 1
-				_delay_us(399);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 2
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 3
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 4
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 5
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 6
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 7
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 8
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 9
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 10
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 11
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 12
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 13
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 14
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 15
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 16
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 17
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 18
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 19
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 20
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 21
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 22
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 23
-				_delay_us(206);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 24
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
-				_delay_us(93);
-				OmegaPort &= ~(1<<OmegaPINnum); // 25
-				_delay_us(107);
-				OmegaPort |= (1<<OmegaPINnum);
+				for(uint8_t i = 0; i < imp; i++)
+				{
+					if(code5[i] == 1)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo1);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code5[i] == 2)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo2);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+					else if(code5[i] == 0)
+					{
+						OmegaPort &= ~(1<<OmegaPINnum);
+						_delay_us(impLo0);
+						OmegaPort |= (1<<OmegaPINnum);
+						_delay_us(impHi);
+					}
+				}
 				OmegaDDR &= ~(1<<OmegaPINnum);
 				_delay_ms(200);				
 					
