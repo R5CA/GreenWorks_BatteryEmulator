@@ -1,5 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/pgmspace.h>
 
 #define OmegaDDR DDRB
 #define OmegaPIN PINB
@@ -12,11 +13,11 @@
 #define impLo1 206
 #define impLo2 107
 
-uint8_t code1[imp] = {0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
-uint8_t code2[imp] = {0,1,2,1,2,2,2,2,2,2,1,1,2,2,2,2,2,1,1,2,1,2,2,2,2};
-uint8_t code3[imp] = {0,2,1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,1,2,2,2,2};
-uint8_t code4[imp] = {0,2,2,1,1,2,2,2,2,1,2,1,1,2,1,2,2,1,2,2,1,1,1,2,2};
-uint8_t code5[imp] = {0,1,1,1,2,2,2,2,2,1,2,2,1,1,2,2,2,2,2,2,2,2,1,2,2};
+const PROGMEM uint8_t code1[imp] = {0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2};
+const PROGMEM uint8_t code2[imp] = {0,1,2,1,2,2,2,2,2,2,1,1,2,2,2,2,2,1,1,2,1,2,2,2,2};
+const PROGMEM uint8_t code3[imp] = {0,2,1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,2,2,2,1,2,2,2,2};
+const PROGMEM uint8_t code4[imp] = {0,2,2,1,1,2,2,2,2,1,2,1,1,2,1,2,2,1,2,2,1,1,1,2,2};
+const PROGMEM uint8_t code5[imp] = {0,1,1,1,2,2,2,2,2,1,2,2,1,1,2,2,2,2,2,2,2,2,1,2,2};
 
 int main(void)
 {
@@ -30,21 +31,21 @@ int main(void)
 				_delay_ms(3);
 				for(uint8_t i = 0; i < imp; i++)
 				{
-					if(code1[i] == 1)
+					if(pgm_read_byte(&code1[i]) == 1)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo1);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code1[i] == 2)
+					else if(pgm_read_byte(&code1[i]) == 2)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo2);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code1[i] == 0)
+					else if(pgm_read_byte(&code1[i]) == 0)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo0);
@@ -61,21 +62,21 @@ int main(void)
 				_delay_ms(3);
 				for(uint8_t i = 0; i < imp; i++)
 				{
-					if(code2[i] == 1)
+					if(pgm_read_byte(&code2[i]) == 1)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo1);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code2[i] == 2)
+					else if(pgm_read_byte(&code2[i]) == 2)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo2);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code2[i] == 0)
+					else if(pgm_read_byte(&code2[i]) == 0)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo0);
@@ -91,21 +92,21 @@ int main(void)
 				_delay_ms(3);
 				for(uint8_t i = 0; i < imp; i++)
 				{
-					if(code3[i] == 1)
+					if(pgm_read_byte(&code3[i]) == 1)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo1);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code3[i] == 2)
+					else if(pgm_read_byte(&code3[i]) == 2)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo2);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code3[i] == 0)
+					else if(pgm_read_byte(&code3[i]) == 0)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo0);
@@ -121,21 +122,21 @@ int main(void)
 				_delay_ms(3);
 				for(uint8_t i = 0; i < imp; i++)
 				{
-					if(code4[i] == 1)
+					if(pgm_read_byte(&code4[i]) == 1)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo1);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code4[i] == 2)
+					else if(pgm_read_byte(&code4[i]) == 2)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo2);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code4[i] == 0)
+					else if(pgm_read_byte(&code4[i]) == 0)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo0);
@@ -151,21 +152,21 @@ int main(void)
 				_delay_ms(3);
 				for(uint8_t i = 0; i < imp; i++)
 				{
-					if(code5[i] == 1)
+					if(pgm_read_byte(&code5[i]) == 1)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo1);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code5[i] == 2)
+					else if(pgm_read_byte(&code5[i]) == 2)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo2);
 						OmegaPort |= (1<<OmegaPINnum);
 						_delay_us(impHi);
 					}
-					else if(code5[i] == 0)
+					else if(pgm_read_byte(&code5[i]) == 0)
 					{
 						OmegaPort &= ~(1<<OmegaPINnum);
 						_delay_us(impLo0);

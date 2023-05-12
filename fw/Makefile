@@ -1,9 +1,9 @@
 # Название проекта
 PRG=greenworks24_batemulator
 # МК
-MCU=atmega16
+MCU=attiny13
 # Частота МК в герцах
-FREQ=8000000UL
+FREQ=9600000UL
 # GCC
 CC=avr-gcc
 # OBJCOPY
