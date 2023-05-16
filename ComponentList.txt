@@ -1,0 +1,20 @@
+Перечень элементов
+ 
+C1	= 1uF 50V (SMD1206)
+C2	= 0.1uF 50V (SMD1206)
+C3	= 10uF 35V (C)
+C4	= 0.1uF 50V (SMD1206)
+C5	= 0.1uF 50V (SMD1206)
+C6	= 0.01uF 50V (SMD1206)
+C7	= 0.01uF 50V (SMD1206)
+ 
+DD1	= ATtiny13A (SO-8)
+ 
+R1	= 1 (SMD1206)
+R2	= 220 (SMD1206)
+R3	= 4k7 (SMD1206)
+ 
+VD1	= 33V 1W (SMD)
+VD2	= 5V1 0.5W (SMD)
+ 
+VR1	= 7805 (D-PAK)
